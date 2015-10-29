@@ -5,8 +5,9 @@ This plugin implements a requesting GPS location from native API for the applica
 * Android 4.0.0 or above
 
 ## Features available on Android
- Get current known location from Network provider
- Watch GPS location from GPS provider
+* Get current known location from Network provider
+*  Watch GPS location from GPS provider
+
 ## Functions
  getGPSPosition(successCallback, errorCallback)  - gets last known location from NETWORK Provider
 
@@ -14,11 +15,11 @@ This plugin implements a requesting GPS location from native API for the applica
 
  stopWatchGPSPosition(successCallback, errorCallback) - stop watching position
 
- ## Installation
+## Installation
 
- cordova plugin add ...
+ cordova plugin add https://github.com/bilyvka/gps-cordova-plugin.git
 
- ## Usage
+## Usage
 
 
  Get current location (NOTE! the phone should have INTERNET CONNECTION)
