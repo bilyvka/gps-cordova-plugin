@@ -11,9 +11,9 @@ This plugin implements a requesting GPS location from native API for the applica
 ## Functions
  getGPSPosition(successCallback, errorCallback)  - gets last known location from NETWORK Provider
 
- startWatchGPSPosition(distance,time,successCallback, errorCallback) - start watching position with distance and time between updates. Parameters "distance" and "time" are integers.
+ startWatchGPSPosition(distance,time,successCallback, errorCallback) - start watching position with distance and time between updates from GPS Provider. Parameters "distance" and "time" are integers.
 
- stopWatchGPSPosition(successCallback, errorCallback) - stop watching position
+ stopWatchGPSPosition(successCallback, errorCallback) - stop watching position from GPS Provider.
 
 ## Installation
 
