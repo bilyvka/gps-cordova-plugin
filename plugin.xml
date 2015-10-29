@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="gps-cordova-plugin"
+        version="1.0.0">
+
+    <name>GPS Cordova Plugin</name>
+
+    <description>
+        This plugin allows you to get GPS location from native hardware.
+    </description>
+
+    <author>Alisa Sotsenko</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <asset src="www/gpsCordovaPlugin.js" target="js/gpsCordovaPlugin.js"/>
+
+    <js-module src="www/gpsCordovaPlugin.js" name="gpsCordovaPlugin">
+        <clobbers target="gpsCordovaPlugin" />
+    </js-module>
+
+
+    <!-- android platform-->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="gpsCordovaPlugin">
+                <param name="android-package" value="gps.cordova.plugin.gpsCordovaPlugin"/>
+            </feature>
+
+        </config-file>
+
+        <source-file src="src/android/gpsCordovaPlugin.java" target-dir="src/gps/cordova/plugin/"/>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
+    </platform>
+
+    <!--<platform name="ios">-->
+
+        <!--<config-file target="config.xml" parent="/widget">-->
+            <!--<feature name="gpsCordovaPlugin">-->
+                <!--<param name="ios-package" value="HWPgpsCordovaPlugin" />-->
+            <!--</feature>-->
+        <!--</config-file>-->
+
+        <!--<header-file src="src/ios/HWPgpsCordovaPlugin.h" target-dir="gpsCordovaPlugin"/>-->
+        <!--<source-file src="src/ios/HWPgpsCordovaPlugin.m" target-dir="gpsCordovaPlugin"/>-->
+    <!--</platform>-->
+
+
+
+</plugin>
