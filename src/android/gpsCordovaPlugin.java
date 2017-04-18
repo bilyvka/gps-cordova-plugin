@@ -130,6 +130,8 @@ public class gpsCordovaPlugin extends CordovaPlugin {
                                     JSONObject result = new JSONObject();
                                     result.put("latitude",location.getLatitude());
                                     result.put("longitude",location.getLongitude());
+                                    result.put("speed",location.getSpeed());
+                                    result.put("accurancy",location.getAccuracy());
                                     result.put("source", "NETWORK");
                                     callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK,result));
                                 }
@@ -264,6 +266,8 @@ public class gpsCordovaPlugin extends CordovaPlugin {
                 JSONObject result = new JSONObject();
                 result.put("latitude",location.getLatitude());
                 result.put("longitude",location.getLongitude());
+                result.put("speed",location.getSpeed());
+                result.put("accurancy",location.getAccuracy());
                 result.put("source","GPS");
 
                 //Constantly send new location to client side
@@ -309,6 +313,8 @@ public class gpsCordovaPlugin extends CordovaPlugin {
                 JSONObject result = new JSONObject();
                 result.put("latitude",location.getLatitude());
                 result.put("longitude",location.getLongitude());
+                result.put("speed",location.getSpeed());
+                result.put("accurancy",location.getAccuracy());
                 result.put("source","NETWORK");
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK,result));
                 //TODO:unregister
